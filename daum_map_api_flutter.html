@@ -27,7 +27,7 @@
       oncomplete: function (data) {
         // console.log(data);
 
-    window.top.postMessage(JSON.stringify(data));
+    window.postMessage(JSON.stringify(data));
       window.flutter_inappwebview.callHandler(JSON.stringify(data));
 	      
 
