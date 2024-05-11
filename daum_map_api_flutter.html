@@ -27,6 +27,7 @@
       oncomplete: function (data) {
         // console.log(data);
 
+window.postMessage('Hello from JavaScript!', 'https://your-flutter-app-url');
 
 	console.log(JSON.stringify(data));
 	      window.postMessage(JSON.stringify(data));
