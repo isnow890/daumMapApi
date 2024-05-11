@@ -21,19 +21,7 @@
       // iframe을 넣은 element를 안보이게 한다.
       element_wrap.style.display = 'none';
     }
-    
 
-	function sendMessageToContainer(message) {
-	  if (inIframe) {
-	    window.top.postMessage(message);
-	  } else {
-	    if (window.flutter_inappwebview) {
-	      window.flutter_inappwebview.callHandler(message);
-	    } else {
-	      console.log('not in an iframe and no flutter binding found');
-	    }
-	  }
-	}
 
 
     // 현재 scroll 위치를 저장해놓는다.
@@ -46,6 +34,7 @@
 		sendMessageToContainer(JSON.stringify(data));
 
 
+
         // window.addEventListener("flutterInAppWebViewPlatformReady", function(event) {
                           
         //                   window.flutter_inappwebview
@@ -55,6 +44,10 @@
           
         // 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
         messageHandler.postMessage(JSON.stringify(data));
+
+
+
+        console.log(JSON.stringify(data));
 
         // 각 주소의 노출 규칙에 따라 주소를 조합한다.
         // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
