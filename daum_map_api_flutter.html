@@ -26,6 +26,15 @@
     new daum.Postcode({
       oncomplete: function (data) {
         // console.log(data);
+
+
+        window.addEventListener("flutterInAppWebViewPlatformReady", function(event) {
+                          
+                          window.flutter_inappwebview
+                            .callHandler('messageHandler', JSON.stringify(data));
+                      });
+                  
+          
         // 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
         messageHandler.postMessage(JSON.stringify(data));
 
