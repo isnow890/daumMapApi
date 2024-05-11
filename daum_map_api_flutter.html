@@ -29,13 +29,7 @@
 
 window.parent.postMessage(JSON.stringify(data), '*'); // 모든 도메인으로 메시지 전송
 
-    window.postMessage(JSON.stringify(data));
-      window.flutter_inappwebview.callHandler(JSON.stringify(data));
-	      
-
-	      
 	console.log(JSON.stringify(data));
-	      window.postMessage(JSON.stringify(data));
 	      
         // 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
         messageHandler.postMessage(JSON.stringify(data));
