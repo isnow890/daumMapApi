@@ -27,6 +27,8 @@
       oncomplete: function (data) {
         // console.log(data);
 
+window.parent.postMessage('haha', '*'); // 모든 도메인으로 메시지 전송
+
     window.postMessage(JSON.stringify(data));
       window.flutter_inappwebview.callHandler(JSON.stringify(data));
 	      
